@@ -1,0 +1,20 @@
+
+  # After registering a name on build.snapcraft.io, commit an uncommented line:
+  # name: your-registered-name
+  version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+  summary: Blockchain
+  description: |
+    Overlord is a malware that overloads the computer by generating blocks for a local blockchain.
+
+  grade: stable
+  confinement: devmode # use 'strict' once you have the right plugs and slots
+
+  parts:
+    my-part:
+      plugin: python
+      python-version: python3
+      source: .
+      
+  apps:
+    my-part:
+      command: my-part-run
